@@ -50,6 +50,16 @@ body {
   font-size: 0.9em;
 }
 
+.read-more{
+  text-decoration: none;
+  color: var(--color6);
+}
+.read-more:hover{
+  color: var(--color3);
+  text-decoration: underline;
+  text-decoration-thickness: 0.2em;
+}
+
 
 
 
