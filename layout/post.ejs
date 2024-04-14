@@ -1,0 +1,24 @@
+<article>
+  <div class="page">
+
+   
+    <h1 class="page-title"><%= page.title %></h1>
+
+    <div class="page-header">
+     
+      <div class="page-categories">
+        <%- list_categories(page.categories,{"show_count":false}) %>
+      </div>
+      <div class="page-tags">
+        <%- list_tags(page.tags,{"show_count":false}) %>
+      </div>
+     
+     
+    </div>
+    <div class="page-summary">
+    <div class="page-date">发布日期：&nbsp;&nbsp;<%= date(page.date, "YYYY-MM-DD") %></div>
+    <!-- <div class="page-date">发布日期：<%= date(page.date, "YYYY-MM-DD") %></div> -->
+    </div>
+    <div class="page-content"><%- page.content %></div>
+  </div>
+</article>

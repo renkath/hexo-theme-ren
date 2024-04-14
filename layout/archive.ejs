@@ -1,0 +1,42 @@
+<div class="archive-header">
+
+    <div class="archive-categories">
+    <h2>
+        <div class="archive-categories-title">
+            分类
+        </div>
+    </h2>
+    <%- list_categories(site.categories,{"show_count":false}) %>
+
+    </div>
+   
+
+    <div class="archive-tags">
+    <h2>
+        <div class="archive-tags-title">
+            标签
+        </div>
+    </h2>
+    <%- list_tags(site.tags,{"show_count":false}) %>
+   
+    </div>
+</div>
+
+
+<div class="archive-posts">
+    <ul class="posts">
+       
+        <% page.posts.each(function(post) { %>
+           
+        <li>   
+            <div class="archive-main">
+                <span class="archive-date"><%- date(post.date, "YYYY-MM-DD") %></span>
+                &raquo;
+                <a class="archive-title" href="<%- url_for(post.path) %>"><%= post.title %></a>
+            </div>
+        </li>
+        <% }) %>
+    </ul>
+</div>
+
+<%- partial('partial/paginator') %>
